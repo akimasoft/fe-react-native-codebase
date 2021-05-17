@@ -6,7 +6,6 @@
  * -----
  * Copyright (c) 2021 Akimasoft
  */
-
 import { ImageSourcePropType } from 'react-native';
 
 export interface Colors {
@@ -17,18 +16,12 @@ export interface Colors {
   background_color: string;
 }
 
-export enum Typography {
-  title = 17,
-  subtitle = 15,
-  captions = 13,
-  description = 10,
+export interface Typography {
+  type: 'bold' | 'semibold' | 'regular' | 'thin';
 }
 
-export enum Align {
-  right = 'right',
-  left = 'left',
-  center = 'center',
-  justify = 'justify',
+export interface Align {
+  align: 'center' | 'right' | 'left' | 'justify';
 }
 
 export enum Font {}
@@ -46,21 +39,14 @@ export interface Images {
   auth: ImageAuth;
 }
 
-export enum RadiusSizes {
-  small = 5,
-  medium = 7,
-  large = 10,
-  extra_large = 15,
+export interface RadiusSizes {
+  radius: 'small' | 'medium' | 'large' | 'extra-large';
 }
 
-export enum DialogType {
-  alert,
-  confirm,
-  prompt,
+export interface DialogType {
+  dialog_type: 'alert' | 'prompt' | 'confirm';
 }
 
-export enum ToastType {
-  info,
-  success,
-  error,
+export interface ToastType {
+  toast_type: 'success' | 'info' | 'error';
 }

@@ -45,10 +45,8 @@ export type BaseRequest = {
   id?: string;
 };
 
-export enum Status {
-  loading = 'loading',
-  error = 'error',
-  success = 'success',
+export interface Status {
+  status: 'loading' | 'success' | 'error';
 }
 
 export type ResultType = {
