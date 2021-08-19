@@ -1,8 +1,13 @@
-/*
- * Project: Akimasoft-Mobile
- * Author: Akimabs
- * -----
- * Modified By: the developer formerly known as akimabs at <ahakimabs@gmail.com>
- * -----
- * Copyright (c) 2021 Akimasoft
- */
+import React from 'react';
+import { Image, View } from 'react-native';
+import { Text } from 'app/components';
+
+const App = () => {
+  return (
+    <View>
+      <Text>asdasd</Text>
+    </View>
+  );
+};
+
+export default App;

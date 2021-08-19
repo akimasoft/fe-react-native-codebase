@@ -1,13 +1,5 @@
-/*
- * Project: Akimasoft-Mobile
- * Author: Akimabs
- * -----
- * Modified By: the developer formerly known as akimabs at <ahakimabs@gmail.com>
- * -----
- * Copyright (c) 2021 Akimasoft
- */
 import axios, { AxiosResponse } from 'axios';
-import { BaseRequest, ResultType, Status } from 'types';
+import { BaseRequest, ResultType } from 'types';
 import { BASE_URL } from 'env';
 
 /**
@@ -31,7 +23,7 @@ export const request = async ({
   method,
 }: BaseRequest): Promise<ResultType> => {
   let result: ResultType = {
-    status: Status.loading,
+    status: 'loading',
     status_code: 0,
     data: null,
   };
@@ -46,7 +38,7 @@ export const request = async ({
     });
 
     const resultSuccess: ResultType = {
-      status: Status.success,
+      status: 'success',
       status_code: res.status,
       data: res.data?.data,
     };
@@ -55,7 +47,7 @@ export const request = async ({
     //End of schema success
   } catch ({ response }: any) {
     const resultError: ResultType = {
-      status: Status.error,
+      status: 'error',
       status_code: response.status,
       data: response.data?.data,
     };

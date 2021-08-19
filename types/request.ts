@@ -1,11 +1,3 @@
-/*
- * Project: Akimasoft-Mobile
- * Author: Akimabs
- * -----
- * Modified By: the developer formerly known as akimabs at <ahakimabs@gmail.com>
- * -----
- * Copyright (c) 2021 Akimasoft
- */
 import { Method } from 'axios';
 
 export enum Endpoint {
@@ -45,12 +37,8 @@ export type BaseRequest = {
   id?: string;
 };
 
-export interface Status {
-  status: 'loading' | 'success' | 'error';
-}
-
 export type ResultType = {
-  status: Status;
+  status: 'loading' | 'success' | 'error';
   status_code: string | number;
   data: any;
   [key: string]: any;
